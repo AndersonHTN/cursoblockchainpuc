@@ -31,17 +31,39 @@ contract Aluguel {
         return valor;
     }
     
-    function simulaMulta ( uint256 mesesRestantes,
-                    uint256 totalMesesContrato)
-    public
-    view
-    returns (uint256 valorMulta) {
-        
+    function simulaMulta ( uint256 mesesRestantes, uint256 totalMesesContrato) public view returns (uint256 valorMulta) 
+    {
         valorMulta = valor*numeroMaximoLegalDeAlugueisParaMulta;
         valorMulta = valorMulta/totalMesesContrato;
         valorMulta = valorMulta*mesesRestantes;
-        
         return valorMulta;
     }
-}
+    
+    function reajusteAluguel (uint256 percentualReajuste) public
+    {
+        if (percentualReajuste > 20)
+        {
+            percentualReajuste = 20;
+        }
+        
+        
+        uint256 valorDoAcrescimo = 0;
+        valorDoAcrescimo = (valor*percentualReajuste)/100;
+        valor = valor + valorDoAcrescimo;
+    }
+    function aditamentoValorAluguel(uint256 valorCerto) public
+    {
+        valor = valorCerto;
+        
+    }
+    
+    function aplicaMulta (uint256 mesesRestantes, uint256 percentual) public
+    {
+        require (mesesRestantes<30, "Periodo de contrato invalido");
+        for (uint i=1; i<mesesRestantes; i++) {
+            valor = valor+((valor*percentual)/100);
+        }
+    }
 
+    
+}
