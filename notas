@@ -11,3 +11,4 @@ end/conta do SC
 
 modifier = faz referência a várias clausulas, algo que se aplicará a várias clausulas posteriores
 
+bool = função para verdadeiro ou falso
