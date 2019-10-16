@@ -12,3 +12,14 @@ end/conta do SC
 modifier = faz referência a várias clausulas, algo que se aplicará a várias clausulas posteriores
 
 bool = função para verdadeiro ou falso
+
+msg.sender = endereço de quem envia a trx
+masg.value = valor que envio na trx
+
+CHAMANDO FUNÇÕES:
+
+nomeDaFunção ()
+escreva o nome da função e logo após abra ( e, se houver parametro informe, depois)
+
+ver moeda ethereum dai = paridade com dollar
+
