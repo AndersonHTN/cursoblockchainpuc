@@ -1,0 +1,34 @@
+  
+pragma solidity 0.5.12;
+
+contract ExtratodeEscrituradeCompraeVenda
+{
+    string public OutorganteVendedor;
+    string public CPFOutorganteVendedor;
+    string public OutorgadoComprador;
+    string public CPFOutorgadoComprador;
+    string public OficioDeRegistroDeImovel;
+    string public MatriculaDoImovel;
+    uint256 public ValordaVenda;
+    
+    constructor(
+        string memory Vendedor,
+        string memory CPFdoVendedor,
+        string memory Comprador,
+        string memory CPFdoComprador,
+        string memory Cartorio,
+        string memory Matricula,
+        uint256 Valor)
+        
+    public{
+        OutorganteVendedor = Vendedor;
+        CPFOutorganteVendedor = CPFdoVendedor;
+        OutorgadoComprador = Comprador;
+        CPFOutorgadoComprador = CPFdoComprador;
+        OficioDeRegistroDeImovel = Cartorio;
+        MatriculaDoImovel = Matricula;
+        ValordaVenda = Valor;
+          
+        }
+       
+}
